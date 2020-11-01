@@ -1,25 +1,15 @@
 import React from "react"
 import Image from "../image"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import {
-  CardColumns,
-  Card,
-  Footer,
-  Body,
-  Title,
-  Img,
-  Text,
-} from "react-bootstrap"
-const Properties = () => {
-  const {
-    gcms: { properties },
-  } = useStaticQuery(pageQuery)
+import { CardColumns, Card } from "react-bootstrap"
+import { Link } from "gatsby"
+const Properties = ({ propertyData }) => {
   return (
     <CardColumns>
+      <Link to="/search"> All </Link>
       <Link to="/rent"> Rent </Link>
       <Link to="/buy"> Buy </Link>
-      {properties.map(({ id, ...property }) => (
-        <Card key={id}>
+      {propertyData.map(property => (
+        <Card key={property.id}>
           {property.coverImage ? (
             <Card.Img variant="top" src={property.coverImage.url} />
           ) : (
@@ -41,26 +31,5 @@ const Properties = () => {
     </CardColumns>
   )
 }
-const pageQuery = graphql`
-  {
-    gcms {
-      properties(orderBy: updatedAt_ASC) {
-        id
-        unitAndBuildingNo
-        unitPrice
-        projectName
-        bhk
-        forRent
-        coverImage {
-          id
-          url
-        }
-        images {
-          id
-          url
-        }
-      }
-    }
-  }
-`
+
 export default Properties
