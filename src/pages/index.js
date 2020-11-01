@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -22,11 +22,23 @@ const IndexPage = () => {
         {properties.map(({ id, ...property }) => (
           <div key={id}>
             <h1> {property.projectName} </h1>
+            <div>
+              {property.coverImage ? (
+                <img src={property.coverImage.url} alt="Cover Image" />
+              ) : (
+                <Image />
+              )}
+            </div>
+            <p>
+              {property.images.map(({ ...image }) => (
+                <div key={image.id}>
+                  <img src={image.url} alt="" />
+                </div>
+              ))}
+            </p>
           </div>
         ))}
       </div>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </Layout>
   )
 }
@@ -37,6 +49,14 @@ const pageQuery = graphql`
       properties {
         id
         projectName
+        coverImage {
+          id
+          url
+        }
+        images {
+          id
+          url
+        }
       }
     }
   }

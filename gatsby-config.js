@@ -32,6 +32,7 @@ module.exports = {
       options: {
         typeName: "GraphCMS",
         fieldName: "gcms",
+        downloadLocalImages: true,
         url:
           "https://api-ap-northeast-1.graphcms.com/v2/ckgru2caqharf01xv0szo1giz/master",
       },
