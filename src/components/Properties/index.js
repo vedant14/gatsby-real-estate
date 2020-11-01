@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "../image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import {
   CardColumns,
   Card,
@@ -16,6 +16,8 @@ const Properties = () => {
   } = useStaticQuery(pageQuery)
   return (
     <CardColumns>
+      <Link to="/rent"> Rent </Link>
+      <Link to="/buy"> Buy </Link>
       {properties.map(({ id, ...property }) => (
         <Card key={id}>
           {property.coverImage ? (
