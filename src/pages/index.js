@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 
 const IndexPage = () => {
   const {
@@ -32,7 +32,7 @@ const IndexPage = () => {
             <p>
               {property.images.map(({ ...image }) => (
                 <div key={image.id}>
-                  <img src={image.url} alt="" />
+                  <img src={image.url} alt="Property Image {image.id}" />
                 </div>
               ))}
             </p>
@@ -46,9 +46,13 @@ const IndexPage = () => {
 const pageQuery = graphql`
   {
     gcms {
-      properties {
+      properties(orderBy: updatedAt_ASC) {
         id
+        unitAndBuildingNo
+        unitPrice
         projectName
+        bhk
+        forRent
         coverImage {
           id
           url
