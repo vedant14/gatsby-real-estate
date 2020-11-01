@@ -10,8 +10,8 @@ const Properties = ({ title, propertyData }) => {
       <h1>{title}</h1>
       <CardColumns>
         <Link to="/search"> All </Link>
-        <Link to="/rent"> Rent </Link>
-        <Link to="/buy"> Buy </Link>
+        <Link to="/search/rent"> Rent </Link>
+        <Link to="/search/buy"> Buy </Link>
         {propertyData.map(property => (
           <Card key={property.id}>
             {property.coverImage ? (

@@ -1,17 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Properties from "../components/Properties"
-const BuyPage = ({ data }) => {
+import Properties from "../../components/Properties"
+const RentPage = ({ data }) => {
 	const properties = data.gcms.properties
-	return <Properties title="Buy" propertyData={properties} />
+	return <Properties title="Rent" propertyData={properties} />
 }
 
-export default BuyPage
+export default RentPage
 
 export const query = graphql`
 	{
 		gcms {
-			properties(orderBy: updatedAt_ASC, where: { forRent: false }) {
+			properties(orderBy: updatedAt_ASC, where: { forRent: true }) {
 				id
 				unitAndBuildingNo
 				unitPrice
