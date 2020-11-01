@@ -1,18 +1,9 @@
 import React from "react"
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Properties from "../components/Properties"
 const SearchPage = ({ data }) => {
 	const properties = data.gcms.properties
-	return (
-		<Layout>
-			<SEO title="Home" />
-			<Link to="/"> Go To Home </Link>
-			<h1>Searching</h1>
-			<Properties propertyData={properties} />
-		</Layout>
-	)
+	return <Properties title="All" propertyData={properties} />
 }
 
 export default SearchPage
