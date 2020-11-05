@@ -1,8 +1,7 @@
 import React from "react"
-import { CardColumns } from "react-bootstrap"
 import { PropCard } from "./PropertyCard.styles"
 import Image from "../image"
-
+import { Link } from "gatsby"
 const PropertyCard = ({
 	id,
 	coverImage,
@@ -29,6 +28,7 @@ const PropertyCard = ({
 				<small className="text-muted">
 					{bhk} | {forRent} | {unitPrice}
 				</small>
+				<Link to={`/properties/${id}`}> View </Link>
 			</PropCard.Footer>
 		</PropCard>
 	)

@@ -1,7 +1,25 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
+  const {
+    data: {
+      gcms: { properties },
+    },
+  } = await graphql(`
+    {
+      gcms {
+        properties(stage: PUBLISHED) {
+          id
+        }
+      }
+    }
+  `)
 
-// You can delete this file if you're not using it
+  properties.forEach(({ id }) =>
+    createPage({
+      path: `/properties/${id}`,
+      component: require.resolve(`./src/templates/PropertyPage.js`),
+      context: {
+        id,
+      },
+    })
+  )
+}

@@ -37,28 +37,26 @@ const Properties = ({ title, propertyData }) => {
             <Tab.Pane eventKey="all">
               <Row>
                 {propertyData.map(property => (
-                  <>
-                    <Col md={4} sm={6} xs={6}>
-                      <PropertyCard
-                        id={property.id}
-                        coverImage={
-                          property.coverImage ? property.coverImage.url : "null"
-                        }
-                        bhk={property.bhk}
-                        projectName={property.projectName}
-                        unitAndBuildingNo={property.unitAndBuildingNo}
-                        forRent={property.forRent}
-                        unitPrice={property.unitPrice}
-                      />
-                    </Col>
-                  </>
+                  <Col md={4} sm={6} xs={6}>
+                    <PropertyCard
+                      id={property.id}
+                      coverImage={
+                        property.coverImage ? property.coverImage.url : "null"
+                      }
+                      bhk={property.bhk}
+                      projectName={property.projectName}
+                      unitAndBuildingNo={property.unitAndBuildingNo}
+                      forRent={property.forRent}
+                      unitPrice={property.unitPrice}
+                    />
+                  </Col>
                 ))}
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="1">
               <Row>
                 {propertyData.map(property => (
-                  <>
+                  <React.Fragment>
                     {property.bhk == "1" ? (
                       <Col md={4} sm={6} xs={6}>
                         <PropertyCard
@@ -78,14 +76,14 @@ const Properties = ({ title, propertyData }) => {
                     ) : (
                       ""
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="2">
               <Row>
                 {propertyData.map(property => (
-                  <>
+                  <React.Fragment>
                     {property.bhk == "2" ? (
                       <Col md={4} sm={6} xs={6}>
                         <PropertyCard
@@ -105,14 +103,14 @@ const Properties = ({ title, propertyData }) => {
                     ) : (
                       ""
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="3">
               <Row>
                 {propertyData.map(property => (
-                  <>
+                  <React.Fragment>
                     {property.bhk == "3" ? (
                       <Col md={4} sm={6} xs={6}>
                         <PropertyCard
@@ -132,14 +130,14 @@ const Properties = ({ title, propertyData }) => {
                     ) : (
                       ""
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </Row>
             </Tab.Pane>
             <Tab.Pane eventKey="4">
               <Row>
                 {propertyData.map(property => (
-                  <>
+                  <React.Fragment>
                     {property.bhk >= "4" ? (
                       <Col md={4} sm={6} xs={6}>
                         <PropertyCard
@@ -159,7 +157,7 @@ const Properties = ({ title, propertyData }) => {
                     ) : (
                       ""
                     )}
-                  </>
+                  </React.Fragment>
                 ))}
               </Row>
             </Tab.Pane>
