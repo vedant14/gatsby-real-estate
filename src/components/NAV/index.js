@@ -17,6 +17,7 @@ const NAV = () => (
 				</Nav>
 				<Nav>
 					<Nav.Link href="/Contact">Contact</Nav.Link>
+					<Nav.Link href="/Contact">Whatsapp</Nav.Link>
 				</Nav>
 			</Container>
 		</Navbar.Collapse>

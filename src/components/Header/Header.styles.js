@@ -19,3 +19,9 @@ export const HeadTitle = styled.h1`
 	bottom: 30%;
 	left: 10%;
 `
+export const HeadText = styled.h3`
+	position: absolute;
+	z-index: 4;
+	bottom: 30%;
+	left: 10%;
+`

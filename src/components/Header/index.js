@@ -1,5 +1,5 @@
 import React from "react"
-import { IMG, HeadContainer, HeadTitle } from "./Header.styles"
+import { IMG, HeadContainer, HeadTitle, HeadText } from "./Header.styles"
 const Header = ({ title }) => (
 	<HeadContainer>
 		<HeadTitle>
@@ -7,6 +7,7 @@ const Header = ({ title }) => (
 			<br />
 			Real Estate service
 		</HeadTitle>
+		<HeadText> We help you find the perfect property </HeadText>
 		<IMG
 			src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=804&q=50"
 			alt=""

@@ -1,21 +1,14 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Image from "../components/image"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
-import { Link } from "gatsby"
+import About from "../components/About"
 const IndexPage = () => {
   return (
     <Layout>
       <Header />
       <SEO />
-      <h1>Hey people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <Link to="/search"> Search for properties </Link>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
+      <About />
     </Layout>
   )
 }
