@@ -2,11 +2,13 @@ import React from "react"
 import Layout from "../components/Layout"
 import Image from "../components/image"
 import SEO from "../components/SEO"
+import Header from "../components/Header"
 import { Link } from "gatsby"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <Header />
+      <SEO />
       <h1>Hey people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
