@@ -96,4 +96,31 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  .chathead{
+    background-image: linear-gradient(110.56deg, rgb(32, 128, 44) 0%, rgb(48, 191, 66) 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    .close {
+      font-size: 3rem;
+      color: ${colors.white};
+      opacity: 60%;
+      :hover {
+        opacity: 100%;
+      }
+    }
+    .modal-title {
+      color: ${colors.white};
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+  .chat {
+    border-radius: 15px;
+    height: 500px;
+  }
 `
