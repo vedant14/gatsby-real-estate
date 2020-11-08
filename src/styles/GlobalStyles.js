@@ -43,8 +43,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: lightTheme.colors.background;
-    color: lightTheme.colors.textSecondary;
+    background: ${lightTheme.colors.background};
+    color: ${lightTheme.colors.textSecondary};
     font-family: "Muli Regular", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
