@@ -12,25 +12,26 @@ const PropertyCard = ({
 	forRent,
 }) => {
 	return (
-		<PropCard>
-			{coverImage != "null" ? (
-				<PropCard.Img variant="top" src={coverImage} />
-			) : (
-				<Image />
-			)}
-			<PropCard.Body>
-				<PropCard.Title>{projectName}</PropCard.Title>
-				<PropCard.Text>
-					{unitAndBuildingNo}, {projectName}
-				</PropCard.Text>
-			</PropCard.Body>
-			<PropCard.Footer>
-				<small className="text-muted">
-					{bhk} | {forRent} | {unitPrice}
-				</small>
-				<Link to={`/properties/${id}`}> View </Link>
-			</PropCard.Footer>
-		</PropCard>
+		<Link to={`/properties/${id}`}>
+			<PropCard>
+				{coverImage != "null" ? (
+					<PropCard.Img variant="top" src={coverImage} />
+				) : (
+					<Image />
+				)}
+				<PropCard.Body>
+					<PropCard.Title>{projectName}</PropCard.Title>
+					<PropCard.Text>
+						{unitAndBuildingNo}, {projectName}
+					</PropCard.Text>
+				</PropCard.Body>
+				<PropCard.Footer>
+					<small className="text-muted">
+						{bhk} | {forRent} | {unitPrice}
+					</small>
+				</PropCard.Footer>
+			</PropCard>
+		</Link>
 	)
 }
 export default PropertyCard
