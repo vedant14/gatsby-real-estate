@@ -1,5 +1,11 @@
 import React from "react"
-import { PropCard, TheCard, Badge } from "./PropertyCard.styles"
+import {
+	PropCard,
+	TheCard,
+	RentBadge,
+	SellBadge,
+	PriceCard,
+} from "./PropertyCard.styles"
 import Image from "../image"
 import { Link } from "gatsby"
 const PropertyCard = ({
@@ -21,17 +27,23 @@ const PropertyCard = ({
 						<Image />
 					)}
 					<PropCard.Body>
-						<Badge>{forRent == true ? "For Rent" : "For Sell"}</Badge>
-						<PropCard.Title>{projectName}</PropCard.Title>
-						<PropCard.Text>
+						{forRent == true ? (
+							<RentBadge>For Rent</RentBadge>
+						) : (
+							<SellBadge>For Sell</SellBadge>
+						)}
+						<PropCard.Title>
 							{unitAndBuildingNo}, {projectName}
-						</PropCard.Text>
+						</PropCard.Title>
+						<hr />
+						<PropCard.Text>Address of the property, city</PropCard.Text>
 					</PropCard.Body>
-					<PropCard.Footer>
-						<small className="text-muted">
-							{forRent} | {unitPrice}
-						</small>
-					</PropCard.Footer>
+					<PriceCard>
+						{new Intl.NumberFormat("en-EN", {
+							style: "currency",
+							currency: "INR",
+						}).format(unitPrice)}
+					</PriceCard>
 				</PropCard>
 			</Link>
 		</TheCard>

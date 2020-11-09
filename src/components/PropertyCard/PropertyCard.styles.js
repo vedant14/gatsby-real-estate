@@ -3,19 +3,18 @@ import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 
 export const PropCard = styled(Card)`
-	height: 400px;
 	margin: 5px;
-	title: 1rem;
 	color: ${colors.darkGrey};
 	border-radius: 20px;
 	text-align: center;
 
 	@media screen and (min-width: 768px) {
-		height: 450px;
 		margin: 20px;
 	}
 	:hover {
 		color: ${colors.deepDarkGrey};
+		transition: all 0.5s;
+		transform: translateY(-10px);
 	}
 
 	img {
@@ -33,7 +32,7 @@ export const TheCard = styled.span`
 		text-decoration: none;
 	}
 `
-export const Badge = styled.span`
+export const RentBadge = styled.span`
 	background-color: ${colors.blueShade1};
 	z-index: 999;
 	width: fit-content;
@@ -43,4 +42,24 @@ export const Badge = styled.span`
 	margin-bottom: 10px;
 	color: white;
 	border-radius: 5px;
+`
+export const SellBadge = styled.span`
+	background-color: ${colors.deepDarkGrey};
+	z-index: 999;
+	width: fit-content;
+	display: flex;
+	padding: 5px;
+	margin-left: -10px;
+	margin-bottom: 10px;
+	color: white;
+	border-radius: 5px;
+`
+
+export const PriceCard = styled.div`
+	background-color: ${colors.darkGrey};
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	color: ${colors.white};
+	font-size: 1.2rem;
+	padding: 10px;
 `
