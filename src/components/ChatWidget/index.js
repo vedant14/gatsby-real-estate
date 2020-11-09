@@ -21,7 +21,7 @@ const ChatWidget = () => {
       query MyQuery {
         file(name: { eq: "whatsapp" }) {
           childImageSharp {
-            fluid(maxWidth: 200) {
+            fluid(maxWidth: 100) {
               ...GatsbyImageSharpFluid
             }
           }

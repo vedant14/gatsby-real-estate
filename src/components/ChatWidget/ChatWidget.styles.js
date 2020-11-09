@@ -11,10 +11,18 @@ export const Widget = styled.div`
 	box-shadow: 0 0 5px 0 #d3d3d3;
 	border: none;
 	outline: none;
-	background-color: #f9f9f9;
+	background-color: #f2f2f2;
+	opacity: 90%;
 	cursor: pointer;
 	padding: 10px;
 	border-radius: 5px;
+	:hover {
+		transition: all 0.5s;
+		transform: translateY(-10px);
+	}
+	img {
+		padding: 10px;
+	}
 `
 
 export const ChatWindow = styled(ModalDialog)`
@@ -52,7 +60,6 @@ export const ChatBody = styled(ModalBody)`
 		font-size: 1.2rem;
 		@media screen and (min-width: 768px) {
 			margin-top: 100px;
-			sha
 		}
 	}
 `
