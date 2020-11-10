@@ -24,7 +24,10 @@ const PropertyCard = ({
 					{coverImage != "null" ? (
 						<PropCard.Img variant="top" src={coverImage} />
 					) : (
-						<Image />
+						<img
+							src="https://images.unsplash.com/photo-1604969253315-a3ee31912f11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+							alt=""
+						/>
 					)}
 					<PropCard.Body>
 						{forRent == true ? (
@@ -32,11 +35,11 @@ const PropertyCard = ({
 						) : (
 							<SellBadge>For Sell</SellBadge>
 						)}
-						<PropCard.Title>
+						<h1>
 							{unitAndBuildingNo}, {projectName}
-						</PropCard.Title>
+						</h1>
 						<hr />
-						<PropCard.Text>Address of the property, city</PropCard.Text>
+						<p>Address of the property, city</p>
 					</PropCard.Body>
 					<PriceCard>
 						{new Intl.NumberFormat("en-EN", {

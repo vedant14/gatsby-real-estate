@@ -96,6 +96,9 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  a:hover {
+   text-decoration: none; 
+  }
   .chathead{
     background-image: linear-gradient(110.56deg, rgb(32, 128, 44) 0%, rgb(48, 191, 66) 100%);
     display: flex;

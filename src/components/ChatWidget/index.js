@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
+
 import { Modal, Button } from "react-bootstrap"
 import Img from "gatsby-image"
 import {
@@ -16,8 +18,9 @@ const ChatWidget = () => {
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
+    const data = useMetaDataQuery()
 
-    const data = useStaticQuery(graphql`
+    const image = useStaticQuery(graphql`
       query MyQuery {
         file(name: { eq: "whatsapp" }) {
           childImageSharp {
@@ -26,17 +29,12 @@ const ChatWidget = () => {
             }
           }
         }
-        site {
-          siteMetadata {
-            whatsapp
-          }
-        }
       }
     `)
     return (
       <React.Fragment>
         <Widget variant="primary" onClick={handleShow}>
-          <Img fluid={data.file.childImageSharp.fluid} /> Chat with us
+          <Img fluid={image.file.childImageSharp.fluid} />
         </Widget>
 
         <Modal
@@ -61,7 +59,7 @@ const ChatWidget = () => {
                 <p>-Vedant</p>
               </Chat>
               <Button
-                href={`https://wa.me/${data.site.siteMetadata.whatsapp}?text=I%20saw%20your%20website%20and%20I%20am%20interested%20in%20your%20services.`}
+                href={`https://wa.me/${data.whatsapp}?text=I%20saw%20your%20website%20and%20I%20am%20interested%20in%20your%20services.`}
                 target="_blank"
                 variant="success"
               >

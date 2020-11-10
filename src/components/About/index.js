@@ -1,29 +1,28 @@
 import React from "react"
 import Image from "../image"
-import { Link } from "gatsby"
-import { Container, Row, Col, Button } from "react-bootstrap"
+import { Row, Col, Button } from "react-bootstrap"
+import { Section } from "./About.styles"
+
 const About = () => (
-	<Container>
-		<h1>About Us</h1>
+	<Section>
 		<Row>
 			<Col>
+				<h1>About Us</h1>
+				<hr />
 				<p>A great template for investors.</p>
 				<p>
 					Now go build something great. Real estate is easy to get lost into.
 				</p>
 				<p>We at this company try to provide the best info to you.</p>
-				<Link to="/search">
-					{" "}
-					<Button>Search for properties</Button>{" "}
-				</Link>
 			</Col>
 			<Col>
-				<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-					<Image />
-				</div>
+				<img
+					src="https://images.unsplash.com/photo-1604969253315-a3ee31912f11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+					alt="about-us"
+				/>
 			</Col>
 		</Row>
-	</Container>
+	</Section>
 )
 
 export default About

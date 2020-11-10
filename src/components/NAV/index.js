@@ -7,17 +7,14 @@ const NAV = () => (
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 		<Navbar.Collapse id="responsive-navbar-nav">
 			<Container>
-				<Nav className="mr-auto">
-					<NavDropdown title="Search" id="collasible-nav-dropdown">
+				<Nav className="ml-auto">
+					<NavDropdown title="Search" drop="left" id="collasible-nav-dropdown">
 						<NavDropdown.Item href="/search">All</NavDropdown.Item>
 						<NavDropdown.Divider />
 						<NavDropdown.Item href="/search/rent">Rent</NavDropdown.Item>
 						<NavDropdown.Item href="/search/buy">Buy</NavDropdown.Item>
 					</NavDropdown>
-				</Nav>
-				<Nav>
 					<Nav.Link href="/Contact">Contact</Nav.Link>
-					<Nav.Link href="/Contact">Whatsapp</Nav.Link>
 				</Nav>
 			</Container>
 		</Navbar.Collapse>

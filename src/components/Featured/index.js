@@ -1,6 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Row, Col, Container } from "react-bootstrap"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { Row, Col } from "react-bootstrap"
+import { Section, SearchButton } from "./Featured.styles"
 import PropertyCard from "../PropertyCard"
 
 export default function Featured() {
@@ -28,8 +29,9 @@ export default function Featured() {
 	`)
 
 	return (
-		<Container>
+		<Section>
 			<h1>Featured Properties</h1>
+			<hr />
 			<Row>
 				{data.gcms.properties.map(property => (
 					<Col md={4} sm={6} xs={6}>
@@ -47,6 +49,9 @@ export default function Featured() {
 					</Col>
 				))}
 			</Row>
-		</Container>
+			<Link to="/search">
+				<SearchButton>Search all properties</SearchButton>
+			</Link>
+		</Section>
 	)
 }

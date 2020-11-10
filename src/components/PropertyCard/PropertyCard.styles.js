@@ -3,24 +3,38 @@ import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 
 export const PropCard = styled(Card)`
-	margin: 5px;
 	color: ${colors.darkGrey};
-	border-radius: 20px;
+	margin-bottom: 10px;
+	border-radius: 5px;
 	text-align: center;
+	height: 350px;
 
 	@media screen and (min-width: 768px) {
 		margin: 20px;
+		height: 450px;
 	}
 	:hover {
 		color: ${colors.deepDarkGrey};
 		transition: all 0.5s;
 		transform: translateY(-10px);
 	}
+	h1 {
+		font-size: 1rem;
+		@media screen and (min-width: 768px) {
+			font-size: 1.2rem;
+		}
+	}
+	p {
+		font-size: 0.9rem;
+		@media screen and (min-width: 768px) {
+			font-size: 0.9rem;
+		}
+	}
 
 	img {
-		height: 150px;
-		border-top-right-radius: 20px;
-		border-top-left-radius: 20px;
+		height: 100px;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
 		object-fit: cover;
 		@media screen and (min-width: 768px) {
 			height: 200px !important;
@@ -42,6 +56,9 @@ export const RentBadge = styled.span`
 	margin-bottom: 10px;
 	color: white;
 	border-radius: 5px;
+	font-size: 0.8rem;
+	@media screen and (min-width: 768px) {
+	}
 `
 export const SellBadge = styled.span`
 	background-color: ${colors.deepDarkGrey};
@@ -53,13 +70,16 @@ export const SellBadge = styled.span`
 	margin-bottom: 10px;
 	color: white;
 	border-radius: 5px;
+	font-size: 0.8rem;
+	@media screen and (min-width: 768px) {
+	}
 `
 
 export const PriceCard = styled.div`
 	background-color: ${colors.darkGrey};
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 	color: ${colors.white};
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	padding: 10px;
 `

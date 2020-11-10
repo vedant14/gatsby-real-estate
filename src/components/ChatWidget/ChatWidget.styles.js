@@ -15,6 +15,7 @@ export const Widget = styled.div`
 	opacity: 90%;
 	cursor: pointer;
 	padding: 10px;
+	width: 80px;
 	border-radius: 5px;
 	:hover {
 		transition: all 0.5s;
