@@ -1,17 +1,23 @@
 import React from "react"
 import { FooterCard } from "./Footer.styles"
 import { Container, Row, Col } from "react-bootstrap"
-const Footer = () => (
-	<FooterCard>
-		<Container>
-			<Row>
-				<Col md={6}>
-					<h1>HI</h1>
-				</Col>
-				<Col md={6}>Social</Col>
-			</Row>
-		</Container>
-	</FooterCard>
-)
+import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
 
+const Footer = () => {
+	const data = useMetaDataQuery()
+	return (
+		<FooterCard>
+			<Container>
+				<Row>
+					<Col md={6}>
+						<p>Copyright © 2020 {data.title} - All Rights Reserved.</p>
+					</Col>
+					<Col md={6}>
+						<p>Social</p>
+					</Col>
+				</Row>
+			</Container>
+		</FooterCard>
+	)
+}
 export default Footer

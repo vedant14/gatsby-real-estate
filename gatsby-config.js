@@ -5,7 +5,7 @@ module.exports = {
     author: `@vedantjl`,
     whatsapp: `+919767137428`,
     email: `hey@vedantlohbare.com`,
-    map: `Homzhub`,
+    map: `COEP`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
