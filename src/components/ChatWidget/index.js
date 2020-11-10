@@ -56,7 +56,7 @@ const ChatWidget = () => {
             <ChatBody>
               <Chat>
                 Hello👋 What service do you need today?
-                <p>-Vedant</p>
+                <p>{data.author}</p>
               </Chat>
               <Button
                 href={`https://wa.me/${data.whatsapp}?text=I%20saw%20your%20website%20and%20I%20am%20interested%20in%20your%20services.`}
