@@ -6,7 +6,7 @@ export const PropCard = styled(Card)`
 	color: ${colors.darkGrey};
 	margin-bottom: 10px;
 	border-radius: 5px;
-	border: none;
+	border: 0.1px solid ${colors.deepDarkGrey};
 	text-align: center;
 	height: 350px;
 

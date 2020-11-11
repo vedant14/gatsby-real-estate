@@ -1,16 +1,14 @@
 import React from "react"
 import Layout from "../Layout"
-import {
-  Row,
-  Col,
-  Tab,
-  Nav,
-  Container,
-  Button,
-  ButtonGroup,
-} from "react-bootstrap"
+import { Row, Col, Tab, Nav, Button, ButtonGroup } from "react-bootstrap"
 import PropertyCard from "../PropertyCard"
-import { PropertyHeader, NavButton, NavPill } from "./Properties.styles"
+import {
+  PropertyHeader,
+  NavButton,
+  NavPill,
+  FilterRow,
+  Section,
+} from "./Properties.styles"
 import { GlobalStyles } from "../../styles/GlobalStyles"
 
 const Properties = ({ title, propertyData }) => {
@@ -29,10 +27,10 @@ const Properties = ({ title, propertyData }) => {
         </NavButton>
       </PropertyHeader>
       <Tab.Container id="left-tabs-example" defaultActiveKey="all">
-        <Row>
+        <FilterRow>
           <Nav variant="pills" fill="true">
             <NavPill>
-              <Nav.Link eventKey="all">All</Nav.Link>
+              <Nav.Link eventKey="all">Any</Nav.Link>
             </NavPill>
             <NavPill>
               <Nav.Link eventKey="1">1 BHK</Nav.Link>
@@ -44,11 +42,11 @@ const Properties = ({ title, propertyData }) => {
               <Nav.Link eventKey="3">3 BHK</Nav.Link>
             </NavPill>
             <NavPill>
-              <Nav.Link eventKey="4">4 and Above</Nav.Link>
+              <Nav.Link eventKey="4">4 +</Nav.Link>
             </NavPill>
           </Nav>
-        </Row>
-        <Container>
+        </FilterRow>
+        <Section>
           <Tab.Content>
             <Tab.Pane eventKey="all">
               <Row>
@@ -178,7 +176,7 @@ const Properties = ({ title, propertyData }) => {
               </Row>
             </Tab.Pane>
           </Tab.Content>
-        </Container>
+        </Section>
       </Tab.Container>
     </Layout>
   )

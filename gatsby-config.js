@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Real estate theme`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@vedantjl`,
+    author: `Vedant`,
     whatsapp: `+919767137428`,
     email: `hey@vedantlohbare.com`,
     map: `COEP`,

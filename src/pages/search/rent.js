@@ -3,7 +3,9 @@ import { graphql } from "gatsby"
 import Properties from "../../components/Properties"
 const RentPage = ({ data }) => {
 	const properties = data.gcms.properties
-	return <Properties title="Rent" propertyData={properties} />
+	return (
+		<Properties title="Showing properties for Rent" propertyData={properties} />
+	)
 }
 
 export default RentPage

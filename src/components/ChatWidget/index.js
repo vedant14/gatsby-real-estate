@@ -4,14 +4,8 @@ import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
 
 import { Modal, Button } from "react-bootstrap"
 import Img from "gatsby-image"
-import {
-  Widget,
-  ChatWindow,
-  ChatBody,
-  Chat,
-  ChatHead,
-} from "./ChatWidget.styles"
-import { GlobalStyles } from "../../styles/GlobalStyles"
+import { Widget, ChatWindow, ChatBody, Chat } from "./ChatWidget.styles"
+
 const ChatWidget = () => {
   function Example() {
     const [show, setShow] = useState(false)

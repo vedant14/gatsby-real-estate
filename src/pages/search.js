@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Properties from "../components/Properties"
 const SearchPage = ({ data }) => {
 	const properties = data.gcms.properties
-	return <Properties title="All" propertyData={properties} />
+	return <Properties title="Showing all properties" propertyData={properties} />
 }
 
 export default SearchPage

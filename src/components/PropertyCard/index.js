@@ -18,7 +18,7 @@ const PropertyCard = ({
 	forRent,
 }) => {
 	return (
-		<TheCard>
+		<TheCard key={id}>
 			<Link to={`/properties/${id}`}>
 				<PropCard>
 					{coverImage != "null" ? (

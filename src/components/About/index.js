@@ -1,6 +1,5 @@
 import React from "react"
-import Image from "../image"
-import { Row, Col, Button } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import { Section } from "./About.styles"
 import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
 
