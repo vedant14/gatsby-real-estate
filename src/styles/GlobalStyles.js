@@ -5,10 +5,12 @@ import MuliBlack from "../fonts/Muli-Black.woff"
 export const colors = {
   white: "#fff",
   darkGrey: "#1a1c20",
+  purple: "#452475",
   deepDarkGrey: "#404040",
   blueShade1: "#215973",
   blueShade2: "#6fadc6",
   blueShade3: "#d1e1e9",
+  ivory: "#fffff0",
 }
 
 export const lightTheme = {
@@ -125,5 +127,8 @@ export const GlobalStyles = createGlobalStyle`
   .chat {
     border-radius: 15px;
     height: 500px;
+  }
+  .active-hide {
+    display: none;
   }
 `

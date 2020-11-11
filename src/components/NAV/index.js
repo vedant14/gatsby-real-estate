@@ -1,11 +1,12 @@
 import React from "react"
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap"
 import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
+import { NavStyle } from "./NAV.styles"
 
 const NAV = () => {
 	const data = useMetaDataQuery()
 	return (
-		<Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+		<NavStyle sticky="top" collapseOnSelect variant="dark" expand="lg">
 			<Navbar.Brand href="/">{data.title}</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
@@ -21,11 +22,11 @@ const NAV = () => {
 							<NavDropdown.Item href="/search/rent">Rent</NavDropdown.Item>
 							<NavDropdown.Item href="/search/buy">Buy</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link href="/Contact">Contact</Nav.Link>
+						<Nav.Link href="#Contact">Contact</Nav.Link>
 					</Nav>
 				</Container>
 			</Navbar.Collapse>
-		</Navbar>
+		</NavStyle>
 	)
 }
 export default NAV
