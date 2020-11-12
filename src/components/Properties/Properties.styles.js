@@ -61,7 +61,7 @@ export const NavPill = styled(NavItem)`
 export const Section = styled(Container)`
 	padding-bottom: 50px;
 	padding-top: 50px;
-	min-height: 100vh;
+	min-height: 80vh;
 	::after {
 		content: "Can't find what you were looking for? WhatsApp us using the chat box on your screen 👉👇";
 		background-color: ${colors.ivory};

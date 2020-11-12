@@ -1,13 +1,17 @@
 import React from "react"
+import Img from "gatsby-image"
+import { Link } from "gatsby"
+import { usePlaceHolder } from "../../hooks/usePlaceHolder"
+
 import {
 	PropCard,
 	TheCard,
 	RentBadge,
 	SellBadge,
 	PriceCard,
+	CustomImg,
 } from "./PropertyCard.styles"
-import Image from "../image"
-import { Link } from "gatsby"
+
 const PropertyCard = ({
 	id,
 	coverImage,
@@ -17,6 +21,8 @@ const PropertyCard = ({
 	bhk,
 	forRent,
 }) => {
+	const image = usePlaceHolder()
+
 	return (
 		<TheCard key={id}>
 			<Link to={`/properties/${id}`}>
@@ -24,10 +30,7 @@ const PropertyCard = ({
 					{coverImage != "null" ? (
 						<PropCard.Img variant="top" src={coverImage} />
 					) : (
-						<img
-							src="https://images.unsplash.com/photo-1604969253315-a3ee31912f11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-							alt=""
-						/>
+						<CustomImg fluid={image} />
 					)}
 					<PropCard.Body>
 						{forRent == true ? (

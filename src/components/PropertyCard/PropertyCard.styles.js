@@ -1,7 +1,17 @@
 import { Card } from "react-bootstrap"
 import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
+import Img from "gatsby-image"
 
+export const CustomImg = styled(Img)`
+	height: 100px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	object-fit: cover;
+	@media screen and (min-width: 768px) {
+		height: 200px !important;
+	}
+`
 export const PropCard = styled(Card)`
 	color: ${colors.darkGrey};
 	margin-bottom: 10px;
