@@ -128,6 +128,10 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 15px;
     height: 500px;
   }
+  .chatbox {
+    border-radius: 15px;
+    height: 550px;
+  }
   .active-hide {
     display: none;
   }

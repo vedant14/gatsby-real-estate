@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 import { Link } from "gatsby"
-import { Container, NavItem, NavLink, Row } from "react-bootstrap"
+import { Container, NavItem, Row } from "react-bootstrap"
 export const PropertyHeader = styled.div`
 	padding: 30px 20px 0px 20px;
 	h1 {

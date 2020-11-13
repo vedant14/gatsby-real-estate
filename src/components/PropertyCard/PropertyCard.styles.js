@@ -57,8 +57,8 @@ export const TheCard = styled.span`
 		text-decoration: none;
 	}
 `
-export const RentBadge = styled.span`
-	background-color: ${colors.blueShade1};
+
+export const ForBadge = styled.span`
 	z-index: 999;
 	width: fit-content;
 	display: flex;
@@ -71,19 +71,11 @@ export const RentBadge = styled.span`
 	@media screen and (min-width: 768px) {
 	}
 `
-export const SellBadge = styled.span`
+export const RentBadge = styled(ForBadge)`
+	background-color: ${colors.blueShade1};
+`
+export const SellBadge = styled(ForBadge)`
 	background-color: ${colors.deepDarkGrey};
-	z-index: 999;
-	width: fit-content;
-	display: flex;
-	padding: 5px;
-	margin-left: -10px;
-	margin-bottom: 10px;
-	color: white;
-	border-radius: 5px;
-	font-size: 0.8rem;
-	@media screen and (min-width: 768px) {
-	}
 `
 
 export const PriceCard = styled.div`

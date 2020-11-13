@@ -1,45 +1,22 @@
 import styled from "styled-components"
 import { colors } from "../../styles/GlobalStyles"
 import { ModalDialog, ModalBody } from "react-bootstrap"
-export const Widget = styled.div`
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	color: green;
-	z-index: 99;
-	font-size: 0.9rem;
-	box-shadow: 0 0 5px 0 #d3d3d3;
-	border: none;
-	outline: none;
-	background-color: #f2f2f2;
-	opacity: 90%;
-	cursor: pointer;
-	padding: 10px;
-	width: 80px;
-	border-radius: 5px;
-	:hover {
-		transition: all 0.5s;
-		transform: translateY(-10px);
-	}
-	img {
-		padding: 10px;
-	}
-`
 
 export const ChatWindow = styled(ModalDialog)`
-	position: fixed;
+	max-width: 100%;
 	width: 350px;
 	bottom: 20px;
 	z-index: 99;
-	padding: 5px;
 	margin-right: auto;
 	margin-left: auto;
 	font-size: 18px;
 	border: none;
 	outline: none;
+	margin-top: 30px;
 	@media screen and (min-width: 768px) {
 		max-width: 350px;
-		right: 30px;
+		right: 0;
+		margin-top: 20px;
 	}
 `
 
@@ -49,9 +26,9 @@ export const ChatBody = styled(ModalBody)`
 	border-bottom-left-radius: 15px;
 
 	.btn {
+		position: relative;
+		margin-left: 50px;
 		border-radius: 30px;
-		margin-left: 60px;
-		margin-right: 75px;
 		width: 200px;
 		margin-top: 150px;
 		font-size: 1.2rem;

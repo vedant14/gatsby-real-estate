@@ -41,7 +41,7 @@ const ChatWidget = () => {
           <ChatWindow contentClassName="chat">
             <Modal.Header bsPrefix="chathead" closeButton>
               <Modal.Title>
-                Hi there 👋
+                Hi there<span role="img">👋</span>
                 <p>
                   We are here to help. Chat with us on WhatsApp for any queries.
                 </p>
@@ -49,7 +49,7 @@ const ChatWidget = () => {
             </Modal.Header>
             <ChatBody>
               <Chat>
-                Hello👋 What service do you need today?
+                Hello<span role="img">👋</span> What service do you need today?
                 <p>{data.author}</p>
               </Chat>
               <Button

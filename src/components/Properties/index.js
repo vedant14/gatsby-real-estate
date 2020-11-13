@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../Layout"
-import { Row, Col, Tab, Nav, Button, ButtonGroup } from "react-bootstrap"
+import { Row, Col, Tab, Nav } from "react-bootstrap"
 import PropertyCard from "../PropertyCard"
 import {
   PropertyHeader,
@@ -9,7 +9,6 @@ import {
   FilterRow,
   Section,
 } from "./Properties.styles"
-import { GlobalStyles } from "../../styles/GlobalStyles"
 
 const Properties = ({ title, propertyData }) => {
   return (
