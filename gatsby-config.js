@@ -3,7 +3,7 @@ module.exports = {
     title: `Real estate theme`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `Vedant`,
-    whatsapp: `+919767137428`,
+    whatsapp: `+919172280651`,
     email: `hey@vedantlohbare.com`,
     map: `COEP`,
   },
