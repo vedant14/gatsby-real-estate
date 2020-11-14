@@ -1,13 +1,13 @@
 import React from "react"
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap"
 import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
-import { NavStyle } from "./NAV.styles"
+import { NavStyle, BrandLink, NavbarLink, DropLink } from "./NAV.styles"
 
 const NAV = () => {
 	const data = useMetaDataQuery()
 	return (
 		<NavStyle sticky="top" collapseOnSelect variant="dark" expand="lg">
-			<Navbar.Brand href="/">{data.title}</Navbar.Brand>
+			<BrandLink to="/">{data.title}</BrandLink>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Container>
@@ -17,12 +17,12 @@ const NAV = () => {
 							drop="left"
 							id="collasible-nav-dropdown"
 						>
-							<NavDropdown.Item href="/search">All</NavDropdown.Item>
+							<DropLink to="/search">All Properties</DropLink>
 							<NavDropdown.Divider />
-							<NavDropdown.Item href="/search/rent">Rent</NavDropdown.Item>
-							<NavDropdown.Item href="/search/buy">Buy</NavDropdown.Item>
+							<DropLink to="/search/rent">Rent</DropLink>
+							<DropLink to="/search/buy">Buy</DropLink>
 						</NavDropdown>
-						<Nav.Link href="/#Contact">Contact</Nav.Link>
+						<NavbarLink to="/#Contact"> Contact </NavbarLink>
 					</Nav>
 				</Container>
 			</Navbar.Collapse>
