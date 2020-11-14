@@ -22,7 +22,7 @@ const NAV = () => {
 							<NavDropdown.Item href="/search/rent">Rent</NavDropdown.Item>
 							<NavDropdown.Item href="/search/buy">Buy</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link href="#Contact">Contact</Nav.Link>
+						<Nav.Link href="/#Contact">Contact</Nav.Link>
 					</Nav>
 				</Container>
 			</Navbar.Collapse>

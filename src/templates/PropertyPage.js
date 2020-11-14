@@ -10,7 +10,7 @@ import {
 	PriceLabel,
 	PropertyDetails,
 } from "./PropertyPage.styles"
-import { Row, Col, thead, tr, th, tbody, td } from "react-bootstrap"
+import { Row, Col, tr, th, tbody, td } from "react-bootstrap"
 import ChatBox from "../components/ChatBox"
 import { usePlaceHolder } from "../hooks/usePlaceHolder"
 
@@ -31,12 +31,13 @@ const PropertyPage = ({
 				<Row>
 					<Col md={6}>
 						<h1>
-							{property.unitAndBuildingNo} {property.projectName}
+							{property.bhk} BHK -{property.unitAndBuildingNo}{" "}
+							{property.projectName}
 						</h1>
 					</Col>
 					<Col md={6}>
 						<PriceRow>
-							{property.forRent == true ? (
+							{property.forRent === true ? (
 								<RentBadge>For Rent</RentBadge>
 							) : (
 								<SellBadge>For Sell</SellBadge>

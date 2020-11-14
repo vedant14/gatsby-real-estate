@@ -70,7 +70,7 @@ const Properties = ({ title, propertyData }) => {
               <Row>
                 {propertyData.map(property => (
                   <React.Fragment>
-                    {property.bhk == "1" ? (
+                    {property.bhk === 1 ? (
                       <Col md={4} sm={6} xs={6}>
                         <PropertyCard
                           id={property.id}
@@ -97,7 +97,7 @@ const Properties = ({ title, propertyData }) => {
               <Row>
                 {propertyData.map(property => (
                   <React.Fragment>
-                    {property.bhk == "2" ? (
+                    {property.bhk === 2 ? (
                       <Col md={4} sm={6} xs={6}>
                         <PropertyCard
                           id={property.id}
@@ -124,7 +124,7 @@ const Properties = ({ title, propertyData }) => {
               <Row>
                 {propertyData.map(property => (
                   <React.Fragment>
-                    {property.bhk == "3" ? (
+                    {property.bhk === 3 ? (
                       <Col md={4} sm={6} xs={6}>
                         <PropertyCard
                           id={property.id}

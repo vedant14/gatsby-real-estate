@@ -30,6 +30,7 @@ const ContactUs = () => {
 					<div>
 						<div>
 							<iframe
+								title="googlemaps"
 								src={`https://maps.google.com/maps?q=${data.map}&output=embed`}
 								frameBorder={0}
 							/>

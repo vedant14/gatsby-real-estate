@@ -56,6 +56,7 @@ export const GlobalStyles = createGlobalStyle`
   main {
     margin-right: auto;
     margin-left: auto;
+    min-height: 80vh;
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
 
 import { Modal, Button } from "react-bootstrap"
@@ -10,13 +10,20 @@ const ChatBox = () => {
     <ChatWindow contentClassName="chatbox">
       <Modal.Header bsPrefix="chathead">
         <Modal.Title>
-          Hi there<span role="img">👋</span>
+          Hi there
+          <span role="img" aria-label="hello">
+            👋
+          </span>
           <p>We are here to help. Chat with us on WhatsApp for any queries.</p>
         </Modal.Title>
       </Modal.Header>
       <ChatBody>
         <Chat>
-          Hello<span role="img">👋</span> Do you want to visit this property?
+          Hello
+          <span role="img" aria-label="hello">
+            👋
+          </span>
+          Do you want to visit this property?
           <p>{data.author}</p>
         </Chat>
         <Button

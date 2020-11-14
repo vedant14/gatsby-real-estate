@@ -11,6 +11,7 @@ export const CustomImg = styled(Img)`
 	display: flex;
 	object-fit: cover;
 	border-radius: 10px;
+	border: 0.5px solid ${colors.deepDarkGrey};
 `
 export const Section = styled(Container)`
 	padding-bottom: 50px;

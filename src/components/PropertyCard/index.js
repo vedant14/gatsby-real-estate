@@ -26,19 +26,19 @@ const PropertyCard = ({
 		<TheCard key={id}>
 			<Link to={`/properties/${id}`}>
 				<PropCard>
-					{coverImage != "null" ? (
+					{coverImage !== "null" ? (
 						<PropCard.Img variant="top" src={coverImage} />
 					) : (
 						<CustomImg fluid={image} />
 					)}
 					<PropCard.Body>
-						{forRent == true ? (
+						{forRent === true ? (
 							<RentBadge>For Rent</RentBadge>
 						) : (
 							<SellBadge>For Sell</SellBadge>
 						)}
 						<h1>
-							{unitAndBuildingNo}, {projectName}
+							{bhk} BHK - {unitAndBuildingNo}, {projectName}
 						</h1>
 						<hr />
 						<p>Address of the property, city</p>
