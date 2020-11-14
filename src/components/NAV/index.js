@@ -12,11 +12,7 @@ const NAV = () => {
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Container>
 					<Nav className="ml-auto">
-						<NavDropdown
-							title="Search"
-							drop="left"
-							id="collasible-nav-dropdown"
-						>
+						<NavDropdown title="Search" id="collasible-nav-dropdown">
 							<DropLink to="/search">All Properties</DropLink>
 							<NavDropdown.Divider />
 							<DropLink to="/search/rent">Rent</DropLink>

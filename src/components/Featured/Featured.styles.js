@@ -3,8 +3,8 @@ import { Container, Button } from "react-bootstrap"
 import { colors } from "../../styles/GlobalStyles"
 
 export const Section = styled(Container)`
-	padding-bottom: 50px;
-	padding-top: 100px;
+	padding-bottom: 30px;
+	padding-top: 50px;
 	h1 {
 		margin-bottom: 30px;
 	}

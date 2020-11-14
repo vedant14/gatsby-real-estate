@@ -16,7 +16,11 @@ export const LinkConst = styled(Link)`
 `
 
 export const NavbarLink = styled(LinkConst)`
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0rem;
+	left: 0;
+	@media screen and (min-width: 768px) {
+		padding: 0.5rem 1rem;
+	}
 `
 
 export const DropLink = styled(LinkConst)`
