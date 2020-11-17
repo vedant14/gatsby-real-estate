@@ -10,7 +10,7 @@ export const colors = {
   blueShade1: "#215973",
   blueShade2: "#6fadc6",
   blueShade3: "#d1e1e9",
-  ivory: "#fffff0",
+  ivory: "#f4f0db",
 }
 
 export const lightTheme = {

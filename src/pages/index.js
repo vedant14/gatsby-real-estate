@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import Header from "../components/Header"
 import About from "../components/About"
 import Featured from "../components/Featured"
+import Testimonial from "../components/Testimonial"
 import ContactUs from "../components/ContactUs"
 const IndexPage = () => {
 	return (
@@ -10,6 +11,7 @@ const IndexPage = () => {
 			<Header />
 			<About />
 			<Featured />
+			<Testimonial />
 			<ContactUs />
 		</Layout>
 	)

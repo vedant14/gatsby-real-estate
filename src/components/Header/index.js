@@ -1,18 +1,30 @@
 import React from "react"
 import { IMG, HeadContainer, HeadTitle, HeadText } from "./Header.styles"
-const Header = ({ title }) => (
-	<HeadContainer>
-		<HeadTitle>
-			Best in Class
-			<br />
-			Real Estate service
-		</HeadTitle>
-		<HeadText> We help you find the perfect property </HeadText>
-		<IMG
-			src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=804&q=50"
-			alt=""
-		/>
-	</HeadContainer>
-)
+import { useStaticQuery, graphql } from "gatsby"
 
+const Header = ({ title }) => {
+	const image = useStaticQuery(graphql`
+		query HeaderImage {
+			file(name: { eq: "header" }) {
+				childImageSharp {
+					fluid(maxWidth: 1200) {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+		}
+	`)
+
+	return (
+		<HeadContainer>
+			<HeadTitle>
+				Best in Class
+				<br />
+				Real Estate service
+			</HeadTitle>
+			<HeadText> We help you find the perfect property </HeadText>
+			<IMG fluid={image.file.childImageSharp.fluid} />
+		</HeadContainer>
+	)
+}
 export default Header

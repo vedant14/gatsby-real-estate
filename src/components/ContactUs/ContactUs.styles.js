@@ -1,9 +1,13 @@
 import styled from "styled-components"
 import { Container, Button } from "react-bootstrap"
+import { colors } from "../../styles/GlobalStyles"
 
+export const BGColor = styled.div`
+	background-color: ${colors.ivory};
+`
 export const Section = styled(Container)`
-	margin-bottom: 50px;
-	margin-top: 100px;
+	padding-bottom: 50px;
+	padding-top: 100px;
 	iframe {
 		max-width: 100%;
 		margin: 10px 0px 10px 0px;
@@ -27,7 +31,7 @@ export const SearchButton = styled(Button)`
 	padding: 10px;
 	text-align: center;
 	box-shadow: 10px 10px;
-	color: white;
+	color: ${colors.ivory};
 	border-radius: 30px;
 	@media screen and (min-width: 768px) {
 		font-size: 1.2rem;

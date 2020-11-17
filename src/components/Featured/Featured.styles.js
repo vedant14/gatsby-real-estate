@@ -22,7 +22,6 @@ export const SearchButton = styled(Button)`
 	border: none;
 	margin-left: auto;
 	padding: 10px;
-	box-shadow: 10px 10px;
 	color: white;
 	border-radius: 30px;
 	@media screen and (min-width: 768px) {

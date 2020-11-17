@@ -1,11 +1,12 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 export const HeadContainer = styled.div`
 	position: relative;
 	color: white;
 	margin-bottom: 30px;
 `
-export const IMG = styled.img`
+export const IMG = styled(Img)`
 	width: 100%;
 	object-fit: cover;
 	height: 50vh;
