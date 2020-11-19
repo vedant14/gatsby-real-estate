@@ -8,7 +8,8 @@ import {
 	RentBadge,
 	SellBadge,
 	PriceCard,
-	CustomImg,
+	Address,
+	Title,
 } from "./PropertyCard.styles"
 
 const PropertyCard = ({
@@ -18,6 +19,7 @@ const PropertyCard = ({
 	unitPrice,
 	unitAndBuildingNo,
 	bhk,
+	address,
 	forRent,
 }) => {
 	const image = usePlaceHolder()
@@ -27,27 +29,23 @@ const PropertyCard = ({
 			<Link to={`/properties/${id}`}>
 				<PropCard>
 					{coverImage !== "null" ? (
-						<PropCard.Img variant="top" src={coverImage} />
+						<PropCard.Img variant="top" src={coverImage} loading="lazy" />
 					) : (
-						<CustomImg fluid={image} />
+						<PropCard.Img variant="top" src={image.publicURL} loading="lazy" />
 					)}
-					<PropCard.Body>
-						{forRent === true ? (
-							<RentBadge>For Rent</RentBadge>
-						) : (
-							<SellBadge>For Sell</SellBadge>
-						)}
-						<h1>
-							{bhk} BHK - {unitAndBuildingNo}, {projectName}
-						</h1>
-						<hr />
-						<p>Address of the property, city</p>
-					</PropCard.Body>
+					<Title>
+						{bhk} BHK, {projectName}
+					</Title>
+					<Address>
+						{unitAndBuildingNo}, {address}
+					</Address>
+					{forRent === true ? (
+						<RentBadge>For Rent</RentBadge>
+					) : (
+						<SellBadge>For Sell</SellBadge>
+					)}
 					<PriceCard>
-						{new Intl.NumberFormat("en-EN", {
-							style: "currency",
-							currency: "INR",
-						}).format(unitPrice)}
+						₹ {unitPrice} {forRent === true ? <span>/ per month</span> : " "}
 					</PriceCard>
 				</PropCard>
 			</Link>

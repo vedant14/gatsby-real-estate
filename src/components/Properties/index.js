@@ -61,6 +61,7 @@ const Properties = ({ title, propertyData }) => {
                       unitAndBuildingNo={property.unitAndBuildingNo}
                       forRent={property.forRent}
                       unitPrice={property.unitPrice}
+                      address={property.address}
                     />
                   </Col>
                 ))}
@@ -84,6 +85,7 @@ const Properties = ({ title, propertyData }) => {
                           unitAndBuildingNo={property.unitAndBuildingNo}
                           forRent={property.forRent}
                           unitPrice={property.unitPrice}
+                          address={property.address}
                         />
                       </Col>
                     ) : (
@@ -111,6 +113,7 @@ const Properties = ({ title, propertyData }) => {
                           unitAndBuildingNo={property.unitAndBuildingNo}
                           forRent={property.forRent}
                           unitPrice={property.unitPrice}
+                          address={property.address}
                         />
                       </Col>
                     ) : (
@@ -138,6 +141,7 @@ const Properties = ({ title, propertyData }) => {
                           unitAndBuildingNo={property.unitAndBuildingNo}
                           forRent={property.forRent}
                           unitPrice={property.unitPrice}
+                          address={property.address}
                         />
                       </Col>
                     ) : (
@@ -165,6 +169,7 @@ const Properties = ({ title, propertyData }) => {
                           unitAndBuildingNo={property.unitAndBuildingNo}
                           forRent={property.forRent}
                           unitPrice={property.unitPrice}
+                          address={property.address}
                         />
                       </Col>
                     ) : (

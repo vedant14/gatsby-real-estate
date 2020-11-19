@@ -28,7 +28,8 @@ export const Card = styled(CardConstant)`
 	background-color: ${colors.blueShade1};
 `
 export const PrimaryCard = styled(CardConstant)`
-	padding-bottom: 50px;
+	padding-bottom: 25px;
+	padding-top: 25px;
 	background-color: ${colors.blueShade2};
 `
 

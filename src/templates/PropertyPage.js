@@ -26,7 +26,7 @@ const PropertyPage = ({
 				{property.coverImage ? (
 					<img src={property.coverImage.url} alt="" />
 				) : (
-					<CustomImg fluid={image} />
+					<CustomImg fluid={image.childImageSharp.fluid} />
 				)}
 				<Row>
 					<Col md={6}>

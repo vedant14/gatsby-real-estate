@@ -20,6 +20,7 @@ export const query = graphql`
 				projectName
 				bhk
 				forRent
+				address
 				coverImage {
 					id
 					url

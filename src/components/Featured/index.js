@@ -23,6 +23,7 @@ export default function Featured() {
 					unitPrice
 					forRent
 					bhk
+					address
 				}
 			}
 		}
@@ -46,6 +47,7 @@ export default function Featured() {
 								unitAndBuildingNo={property.unitAndBuildingNo}
 								forRent={property.forRent}
 								unitPrice={property.unitPrice}
+								address={property.address}
 							/>
 						</Col>
 					))}

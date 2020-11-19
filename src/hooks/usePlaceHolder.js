@@ -9,8 +9,9 @@ export const usePlaceHolder = () => {
 						...GatsbyImageSharpFluid
 					}
 				}
+				publicURL
 			}
 		}
 	`)
-	return data.placeholderImage.childImageSharp.fluid
+	return data.placeholderImage
 }
