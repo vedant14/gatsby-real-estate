@@ -62,12 +62,12 @@ export const ChatBody = styled(ModalBody)`
 
 export const Chat = styled.div`
 	position: relative;
-	background: ${colors.secondaryAccent};
+	background: ${colors.greenShade1};
 	text-align: right;
 	max-width: 75%;
 	padding: 10px 15px;
 	border-radius: 6px;
-	border: 1px solid ${colors.secondaryAccent};
+	border: 1px solid ${colors.greenShade1};
 	float: right;
 	right: 20px;
 	margin-top: 30px;
@@ -79,7 +79,7 @@ export const Chat = styled.div`
 		top: -1px;
 		right: -10px;
 		border: 10px solid transparent;
-		border-top: 10px solid ${colors.secondaryAccent};
+		border-top: 10px solid ${colors.greenShade1};
 	}
 
 	::after {
@@ -88,8 +88,8 @@ export const Chat = styled.div`
 		visibility: visible;
 		top: 0px;
 		right: -8px;
-		border: 10px solid transparent ${colors.secondaryAccent};
-		border-top: 10px solid ${colors.secondaryAccent};
+		border: 10px solid transparent ${colors.greenShade1};
+		border-top: 10px solid ${colors.greenShade1};
 		clear: both;
 	}
 	p {
