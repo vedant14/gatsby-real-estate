@@ -131,4 +131,11 @@ export const GlobalStyles = createGlobalStyle`
   .active-hide {
     display: none;
   }
+  .dropdown{
+    color: ${colors.white};
+    padding: 0.5rem 0rem;
+    :hover {
+      color: ${colors.white};
+    }
+  }
 `

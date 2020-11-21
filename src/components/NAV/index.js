@@ -12,7 +12,8 @@ const NAV = () => {
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Container>
 					<Nav className="ml-auto">
-						<NavDropdown title="Search" id="collasible-nav-dropdown">
+						<NavbarLink>Call at: {data.whatsapp}</NavbarLink>
+						<NavDropdown title="Search" id="collasible-nav-dropdown" bsPrefix="dropdown">
 							<DropLink to="/search">All Properties</DropLink>
 							<NavDropdown.Divider />
 							<DropLink to="/search/rent">Rent</DropLink>
