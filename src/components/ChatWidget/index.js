@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
+import { useConfigQuery } from "../../hooks/useConfigQuery"
 
 import { Modal, Button } from "react-bootstrap"
 import Img from "gatsby-image"
@@ -12,7 +12,7 @@ const ChatWidget = () => {
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
-    const data = useMetaDataQuery()
+    const data = useConfigQuery()
 
     const image = useStaticQuery(graphql`
       query MyQuery {
@@ -52,12 +52,9 @@ const ChatWidget = () => {
             </Modal.Header>
             <ChatBody>
               <Chat>
-                Hello
-                <span role="img" aria-label="hello">
-                  👋
-                </span>{" "}
+                Hello!
                 What service do you need today?
-                <p>{data.author}</p>
+                <p>-{data.author}</p>
               </Chat>
               <Button
                 href={`https://wa.me/${data.whatsapp}?text=I%20saw%20your%20website%20and%20I%20am%20interested%20in%20your%20services.`}

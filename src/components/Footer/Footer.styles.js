@@ -8,6 +8,6 @@ export const FooterCard = styled.div`
 
 	height: 200px;
 	width: 100%;
-	background-color: ${colors.blueShade1};
+	background-color: ${colors.primaryAccent};
 	color: ${colors.white};
 `

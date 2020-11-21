@@ -1,10 +1,10 @@
 import React from "react"
 import { FooterCard } from "./Footer.styles"
 import { Container, Row, Col } from "react-bootstrap"
-import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
+import { useConfigQuery } from "../../hooks/useConfigQuery"
 
 const Footer = () => {
-	const data = useMetaDataQuery()
+	const data = useConfigQuery()
 	return (
 		<FooterCard>
 			<Container>

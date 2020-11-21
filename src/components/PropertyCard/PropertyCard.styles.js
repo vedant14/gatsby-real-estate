@@ -16,11 +16,6 @@ export const PropCard = styled(Card)`
 		margin: 50px 20px;
 		height: 400px;
 	}
-	:hover {
-		color: ${colors.deepDarkGrey};
-		transition: all 0.5s;
-		transform: translateY(-10px);
-	}
 
 	img {
 		position: absolute;
@@ -89,14 +84,14 @@ export const ForBadge = styled.span`
 	}
 `
 export const RentBadge = styled(ForBadge)`
-	background-color: ${colors.blueShade1};
+	background-color: ${colors.secondaryAccent};
 	bottom: 60px;
 	@media screen and (min-width: 768px) {
 		bottom: 40px;
 	}
 `
 export const SellBadge = styled(ForBadge)`
-	background-color: ${colors.deepDarkGrey};
+	background-color: ${colors.greenShade2};
 `
 
 export const PriceCard = styled.span`

@@ -1,10 +1,10 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
 import { BGColor, Section, SearchButton } from "./ContactUs.styles"
-import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
+import { useConfigQuery } from "../../hooks/useConfigQuery"
 
 const ContactUs = () => {
-	const data = useMetaDataQuery()
+	const data = useConfigQuery()
 	return (
 		<BGColor>
 			<Section>
@@ -22,7 +22,6 @@ const ContactUs = () => {
 						<SearchButton
 							href={`https://wa.me/${data.whatsapp}?text=I%20saw%20your%20website%20and%20I%20am%20interested%20in%20your%20services.`}
 							target="_blank"
-							variant="success"
 						>
 							Chat on WhatsApp
 						</SearchButton>

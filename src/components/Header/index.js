@@ -1,13 +1,15 @@
 import React from "react"
 import { IMG, HeadContainer, HeadTitle, HeadText } from "./Header.styles"
 import { useStaticQuery, graphql } from "gatsby"
+import { useConfigQuery } from "../../hooks/useConfigQuery"
 
 const Header = ({ title }) => {
+	const data = useConfigQuery()
 	const image = useStaticQuery(graphql`
 		query HeaderImage {
 			file(name: { eq: "header" }) {
 				childImageSharp {
-					fluid(maxWidth: 1200) {
+					fluid(maxWidth: 1800) {
 						...GatsbyImageSharpFluid
 					}
 				}
@@ -18,11 +20,9 @@ const Header = ({ title }) => {
 	return (
 		<HeadContainer>
 			<HeadTitle>
-				Best in Class
-				<br />
-				Real Estate service
+					{data.header}
 			</HeadTitle>
-			<HeadText> We help you find the perfect property </HeadText>
+			<HeadText> {data.subtitle} </HeadText>
 			<IMG fluid={image.file.childImageSharp.fluid} />
 		</HeadContainer>
 	)

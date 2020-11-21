@@ -1,10 +1,10 @@
 import React from "react"
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap"
-import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
+import { useConfigQuery } from "../../hooks/useConfigQuery"
 import { NavStyle, BrandLink, NavbarLink, DropLink } from "./NAV.styles"
 
 const NAV = () => {
-	const data = useMetaDataQuery()
+	const data = useConfigQuery()
 	return (
 		<NavStyle sticky="top" collapseOnSelect variant="dark" expand="lg">
 			<BrandLink to="/">{data.title}</BrandLink>

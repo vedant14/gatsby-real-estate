@@ -7,7 +7,7 @@ export const CardConstant = styled.div`
 	color: ${colors.ivory};
 	margin: 30px 10px;
 	border-radius: 20px;
-	box-shadow: rgba(0, 0, 0, 0.22) 5px 10px 10px;
+	box-shadow: ${colors.deepGrey} 5px 10px 10px;
 	transition: all 0.3s ease-in-out;
 	h2 {
 		margin-bottom: 1px;
@@ -25,12 +25,12 @@ export const CardConstant = styled.div`
 `
 
 export const Card = styled(CardConstant)`
-	background-color: ${colors.blueShade1};
+	background-color: ${colors.primaryAccent};
 `
 export const PrimaryCard = styled(CardConstant)`
 	padding-bottom: 25px;
 	padding-top: 25px;
-	background-color: ${colors.blueShade2};
+	background-color: ${colors.secondaryAccent};
 `
 
 export const Section = styled(Container)`

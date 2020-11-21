@@ -1,30 +1,17 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useConfigQuery } from "../../hooks/useConfigQuery"
+
 import { Card, PrimaryCard, Section } from "./Testimonial.styles"
 import { Row, Col } from "react-bootstrap"
 const Testimonial = () => {
-	const Testimonial = useStaticQuery(graphql`
-		query {
-			markdownRemark(frontmatter: { type: { eq: "config" } }) {
-				frontmatter {
-					title
-					testimonial {
-						id
-						name
-						content
-						city
-					}
-				}
-			}
-		}
-	`)
+	const Testimonial = useConfigQuery()
 
-	const FirstTestimonial = Testimonial.markdownRemark.frontmatter.testimonial[0]
+	const FirstTestimonial = Testimonial.testimonial[0]
 
 	const SecondTestimonial =
-		Testimonial.markdownRemark.frontmatter.testimonial[1]
+		Testimonial.testimonial[1]
 
-	const ThirdTestimonial = Testimonial.markdownRemark.frontmatter.testimonial[2]
+	const ThirdTestimonial = Testimonial.testimonial[2]
 
 	return (
 		<Section>

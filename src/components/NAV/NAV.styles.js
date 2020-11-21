@@ -3,14 +3,14 @@ import { Navbar } from "react-bootstrap"
 import { colors } from "../../styles/GlobalStyles"
 import { Link } from "gatsby"
 export const NavStyle = styled(Navbar)`
-	background-color: ${colors.blueShade1};
+	background-color: ${colors.primaryAccent};
 `
 
 export const LinkConst = styled(Link)`
 	display: block;
-	color: ${colors.ivory};
+	color: ${colors.white};
 	:hover {
-		color: ${colors.ivory};
+		color: ${colors.white};
 		opacity: 80%;
 	}
 `
@@ -39,11 +39,11 @@ export const DropLink = styled(LinkConst)`
 `
 
 export const BrandLink = styled(Link)`
-	color: ${colors.ivory};
+	color: ${colors.white};
 	font-size: 1.4rem;
 	padding: 10px;
 	:hover {
-		color: ${colors.ivory};
+		color: ${colors.white};
 		opacity: 80%;
 	}
 `

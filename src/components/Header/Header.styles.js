@@ -18,6 +18,9 @@ export const HeadTitle = styled.h1`
 	position: absolute;
 	z-index: 4;
 	bottom: 30%;
+	@media screen and (min-width: 768px) {
+		width: 500px;
+	}
 	left: 10%;
 `
 export const HeadText = styled.h3`

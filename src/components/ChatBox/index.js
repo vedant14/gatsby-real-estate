@@ -1,11 +1,11 @@
 import React from "react"
-import { useMetaDataQuery } from "../../hooks/useMetaDataQuery"
+import { useConfigQuery } from "../../hooks/useConfigQuery"
 
 import { Modal, Button } from "react-bootstrap"
 import { ChatWindow, ChatBody, Chat } from "./ChatBox.styles"
 
 const ChatBox = () => {
-  const data = useMetaDataQuery()
+  const data = useConfigQuery()
   return (
     <ChatWindow contentClassName="chatbox">
       <Modal.Header bsPrefix="chathead">
@@ -19,12 +19,9 @@ const ChatBox = () => {
       </Modal.Header>
       <ChatBody>
         <Chat>
-          Hello
-          <span role="img" aria-label="hello">
-            👋
-          </span>
+          Hello!
           Do you want to visit this property?
-          <p>{data.author}</p>
+          <p>-{data.author}</p>
         </Chat>
         <Button
           href={`https://wa.me/${data.whatsapp}?text=I%20saw%20your%20website%20and%20I%20am%20interested%20in%20your%20services.`}

@@ -18,18 +18,19 @@ export const SearchButton = styled(Button)`
 	margin-top: 50px;
 	display: flex;
 	margin-right: auto;
-	background-color: ${colors.blueShade1};
 	border: none;
 	margin-left: auto;
-	padding: 10px;
-	color: white;
+	padding: 10px 20px;
+	color: ${colors.white};
 	border-radius: 30px;
 	@media screen and (min-width: 768px) {
 		font-size: 1.2rem;
-		padding: 15px 10px 15px 10px;
+		padding: 15px 30px;
 		border-radius: 30px;
 	}
-	:hover {
-		background-color: ${colors.blueShade2};
+	background-color: ${colors.greenShade1};
+	:hover
+	{
+		background-color: ${colors.greenShade2};
 	}
 `

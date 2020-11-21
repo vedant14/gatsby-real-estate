@@ -28,14 +28,19 @@ export const SearchButton = styled(Button)`
 	margin-right: auto;
 	margin-left: auto;
 	width: fit-content;
-	padding: 10px;
+	padding: 10px 20px;
 	text-align: center;
-	box-shadow: 10px 10px;
-	color: ${colors.ivory};
+	background-color: ${colors.greenShade1};
+	:hover
+	{
+		background-color: ${colors.greenShade2};
+	}
+	border: none;
+	color: ${colors.white};
 	border-radius: 30px;
 	@media screen and (min-width: 768px) {
 		font-size: 1.2rem;
-		padding: 15px 10px 15px 10px;
+		padding: 15px 30px;
 		border-radius: 30px;
 		margin-left: 0px;
 	}

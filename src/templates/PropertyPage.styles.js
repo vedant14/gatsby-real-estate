@@ -52,10 +52,10 @@ export const ForBadge = styled.span`
 	}
 `
 export const RentBadge = styled(ForBadge)`
-	background-color: ${colors.blueShade1};
+	background-color: ${colors.secondaryAccent};
 `
 export const SellBadge = styled(ForBadge)`
-	background-color: ${colors.deepDarkGrey};
+	background-color: ${colors.greenShade2};
 `
 export const PriceLabel = styled.span`
 	margin: 30px;

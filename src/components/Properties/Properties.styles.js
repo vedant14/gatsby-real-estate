@@ -13,7 +13,7 @@ export const PropertyHeader = styled.div`
 			font-size: 2.5rem;
 		}
 	}
-	background-color: ${colors.blueShade1};
+	background-color: ${colors.primaryAccent};
 	color: ${colors.white};
 `
 export const NavButton = styled(Link)`
@@ -37,7 +37,7 @@ export const FilterRow = styled(Row)`
 	@media screen and (min-width: 768px) {
 		padding: 0px 150px 50px 115px;
 	}
-	background-color: ${colors.blueShade1};
+	background-color: ${colors.primaryAccent};
 	color: ${colors.white};
 `
 export const NavPill = styled(NavItem)`
@@ -65,7 +65,7 @@ export const Section = styled(Container)`
 	::after {
 		content: "Can't find what you were looking for? WhatsApp us using the chat box on your screen 👉👇";
 		background-color: ${colors.ivory};
-		color: ${colors.blueShade1};
+		color: ${colors.secondaryAccent};
 		padding: 10px;
 		@media screen and (min-width: 768px) {
 			font-size: 1.4rem;

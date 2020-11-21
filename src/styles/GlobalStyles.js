@@ -3,25 +3,16 @@ import MuliRegular from "../fonts/Muli-Regular.woff"
 import MuliBlack from "../fonts/Muli-Black.woff"
 
 export const colors = {
-  white: "#fff",
+  white: "#ffffff",
   darkGrey: "#1a1c20",
-  purple: "#452475",
   deepDarkGrey: "#404040",
-  blueShade1: "#215973",
-  blueShade2: "#6fadc6",
-  blueShade3: "#d1e1e9",
-  ivory: "#f4f0db",
+  primaryAccent: "#24aae2",
+  secondaryAccent: "#1399c6",
+  greenShade1: "#00a86b",
+  greenShade2: "#008f5b",
+  ivory: "#fffff0",
 }
 
-export const lightTheme = {
-  colors: {
-    background: colors.white,
-    menuBackground: colors.blueShade3,
-    textDark: colors.blueShade1,
-    textMain: colors.blueShade2,
-    textSecondary: colors.deepDarkGrey,
-  },
-}
 
 export const GlobalStyles = createGlobalStyle`
   :root {
@@ -45,8 +36,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${lightTheme.colors.background};
-    color: ${lightTheme.colors.textSecondary};
+    background: ${colors.background};
+    color: ${colors.textSecondary};
     font-family: "Muli Regular", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -132,6 +123,10 @@ export const GlobalStyles = createGlobalStyle`
   .chatbox {
     border-radius: 15px;
     height: 550px;
+  }
+  .nav-link.active {
+    background-color: ${colors.greenShade1} !important;
+    color: ${colors.white} !important;
   }
   .active-hide {
     display: none;

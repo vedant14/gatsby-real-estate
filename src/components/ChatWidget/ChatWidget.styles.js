@@ -5,13 +5,12 @@ export const Widget = styled.div`
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
-	color: green;
 	z-index: 99;
 	font-size: 0.9rem;
-	box-shadow: 0 0 5px 0 #d3d3d3;
+	box-shadow: 0 0 5px 0 ${colors.deepDarkGrey};
 	border: none;
 	outline: none;
-	background-color: #f2f2f2;
+	background-color: ${colors.white};
 	opacity: 90%;
 	cursor: pointer;
 	padding: 10px;
@@ -63,12 +62,12 @@ export const ChatBody = styled(ModalBody)`
 
 export const Chat = styled.div`
 	position: relative;
-	background: ${colors.blueShade3};
+	background: ${colors.secondaryAccent};
 	text-align: right;
 	max-width: 75%;
 	padding: 10px 15px;
 	border-radius: 6px;
-	border: 1px solid ${colors.blueShade3};
+	border: 1px solid ${colors.secondaryAccent};
 	float: right;
 	right: 20px;
 	margin-top: 30px;
@@ -80,7 +79,7 @@ export const Chat = styled.div`
 		top: -1px;
 		right: -10px;
 		border: 10px solid transparent;
-		border-top: 10px solid ${colors.blueShade3};
+		border-top: 10px solid ${colors.secondaryAccent};
 	}
 
 	::after {
@@ -89,8 +88,8 @@ export const Chat = styled.div`
 		visibility: visible;
 		top: 0px;
 		right: -8px;
-		border: 10px solid transparent ${colors.blueShade3};
-		border-top: 10px solid ${colors.blueShade3};
+		border: 10px solid transparent ${colors.secondaryAccent};
+		border-top: 10px solid ${colors.secondaryAccent};
 		clear: both;
 	}
 	p {
